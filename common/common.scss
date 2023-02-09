@@ -1,10 +1,12 @@
 // 270px is the width of the sidebar + gap
 @mixin adjustableBreakpoint($original, $adjustment: 270px) {
-  @if $plugin-outlet = "above-main-container-outlet" {
+  @if $plugin-outlet ="above-main-container-outlet" {
     @media screen and (max-width: ($original + $adjustment)) {
       @content;
     }
-  } @else {
+  }
+
+  @else {
     @media screen and (max-width: $original) {
       @content;
     }
@@ -44,7 +46,7 @@
         transition: color 0.25s;
       }
 
-      > div {
+      >div {
         align-items: center;
         display: flex;
         justify-content: center;
@@ -73,6 +75,7 @@
           &:hover {
             color: #{$banner-link-color};
             text-decoration: underline;
+
             .d-icon {
               color: #{$banner-link-color};
             }
@@ -95,7 +98,7 @@
 
     .welcome-content {
       max-width: 375px;
-      text-align: left;
+      text-align: center;
       padding: 2.5em 2em 3em;
 
       p {
@@ -134,7 +137,7 @@
         flex-direction: column;
         padding: 0.5em 0.5em 1.25em;
 
-        > div {
+        >div {
           margin: 0 auto;
         }
       }
